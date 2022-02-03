@@ -8,16 +8,29 @@
 <body>
   <script type="text/javascript">
 
-    
+    let win = "You Win! You beat Jeff!"
+    let lose = "You Lose! Paper beats Rock"
 
   	function computerPlay() {
-  		let computerSelection = ["Rock", "Scissors", "Paper"];
-  		return computerSelection[Math.floor(Math.random()*computerSelection.length)];
+  		const RPSArray = ["Rock", "Scissors", "Paper"];
+  		const randomSelection = RPSArray[Math.floor(Math.random()*RPSArray.length)];
+      return randomSelection;
   	};
-    
-    console.log(prompt());
-    console.log(computerPlay());
 
+    function playerSelection() {
+      prompt() 
+    };
+    
+    function playRound(playerSelection,computerSelection) { 
+        computerSelection = computerPlay();
+        playerSelection = playerSelection();
+
+    };
+    
+
+    function game() {
+
+    };
 
   </script>
 </body>
