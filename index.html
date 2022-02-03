@@ -22,16 +22,17 @@
       return ("You choose: " + choice)
     };
     
-    function playRound(playerSelection,computerSelection) { 
+    function playRound() { 
         computerSelection = computerPlay();
         playerSelection = playerSelect();
+        return (playerSelection, computerSelection);
     };
 
     function game() {
 
     };
 
-    console.log(computerPlay());
+    console.log(playRound());
 
   </script>
 </body>
