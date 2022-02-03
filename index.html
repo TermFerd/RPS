@@ -17,20 +17,21 @@
       return randomSelection;
   	};
 
-    function playerSelection() {
-      prompt() 
+    function playerSelect() {
+      let choice = prompt("Rock, Paper or Scissors?");
+      return ("You choose: " + choice)
     };
     
     function playRound(playerSelection,computerSelection) { 
         computerSelection = computerPlay();
-        playerSelection = playerSelection();
-
+        playerSelection = playerSelect();
     };
-    
 
     function game() {
 
     };
+
+    console.log(playerSelect());
 
   </script>
 </body>
