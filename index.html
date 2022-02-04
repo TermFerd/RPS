@@ -12,25 +12,24 @@
     let lose = "You Lose! Paper beats Rock"
 
   	function computerPlay() {
-  		const RPSArray = ["Rock", "Scissors", "Paper"];
-  		const randomSelection = RPSArray[Math.floor(Math.random()*RPSArray.length)];
+  		const RPS = ['Rock', 'Scissors', 'Paper'];
+  		const randomSelection = RPS[Math.floor(Math.random()*RPS.length)];
       return randomSelection;
   	};
 
     function playerSelect() {
-      let choice = prompt("Rock, Paper or Scissors?");
-      return ("You choose: " + choice)
-    };
-    
-    function playRound() { 
-        computerSelection = computerPlay();
-        playerSelection = playerSelect();
-        return (playerSelection, computerSelection);
+      let playerSelection = prompt("Rock, Paper or Scissors?");
+      return (playerSelection)
     };
 
-    function game() {
-
+    function playRound() {
+      playerSelection = playerSelect();
+      computerSelection = computerPlay();
+      const round = {"playerSelection":playerSelection, "computerSelection": computerSelection};
+      return round
     };
+
+
 
     console.log(playRound());
 
