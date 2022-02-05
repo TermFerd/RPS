@@ -12,14 +12,28 @@
     let lose = "You Lose! Paper beats Rock"
 
   	function computerPlay() {
-  		const RPS = ['Rock', 'Scissors', 'Paper'];
+  		const RPS = ['rock', 'scissors', 'paper'];
   		const randomSelection = RPS[Math.floor(Math.random()*RPS.length)];
       return randomSelection;
   	};
 
     function playerSelect() {
       let playerSelection = prompt("Rock, Paper or Scissors?");
-      return (playerSelection)
+      let favorite = "";
+      let testing = 0;
+      while (testing == 0)
+    {
+    if(playerSelection.toLowerCase() == "rock" || playerSelection.toLowerCase() == "paper" || playerSelection.toLowerCase() == "scissors")
+    {
+        testing = 1;
+    }
+        else
+    {
+        playerSelection = prompt("rock, paper or scissors?");
+
+        }
+    }
+      return playerSelection.toLowerCase();
     };
 
     function playRound() {
