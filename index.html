@@ -19,18 +19,16 @@
 
     function playerSelect() {
       let playerSelection = prompt("Rock, Paper or Scissors?");
-      let favorite = "";
       let testing = 0;
       while (testing == 0)
     {
-    if(playerSelection.toLowerCase() == "rock" || playerSelection.toLowerCase() == "paper" || playerSelection.toLowerCase() == "scissors")
+      if(playerSelection.toLowerCase() === "rock" || playerSelection.toLowerCase() === "paper" || playerSelection.toLowerCase() === "scissors")
     {
         testing = 1;
     }
         else
     {
-        playerSelection = prompt("rock, paper or scissors?");
-
+        playerSelection = prompt("Rock, Paper or Scissors?");
         }
     }
       return playerSelection.toLowerCase();
@@ -42,8 +40,17 @@
       const round = {"playerSelection":playerSelection, "computerSelection": computerSelection};
       return round
     };
+    
+    function game() {
+      const game = {"roundOne":playRound(), "roundTwo":playRound()};
+      return game
+    }
 
-    console.log(playRound());
+
+
+
+
+    console.log(game());
 
   </script>
 </body>
