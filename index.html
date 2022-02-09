@@ -20,18 +20,14 @@
     function playerSelect() {
       let playerSelection = prompt("Rock, Paper or Scissors?");
       let testing = 0;
-      while (testing == 0)
-    {
-      if(playerSelection.toLowerCase() === "rock" || playerSelection.toLowerCase() === "paper" || playerSelection.toLowerCase() === "scissors")
-    {
+      while (testing == 0) {
+      if (playerSelection.toLowerCase() === "rock" || playerSelection.toLowerCase() === "paper" || playerSelection.toLowerCase() === "scissors") {
         testing = 1;
-    }
-        else
-    {
+        } else {
         playerSelection = prompt("Rock, Paper or Scissors?");
         }
-    }
-      return playerSelection.toLowerCase();
+      }
+    return playerSelection.toLowerCase();
     };
 
     function playRound() {
@@ -40,17 +36,8 @@
       const round = {"playerSelection":playerSelection, "computerSelection": computerSelection};
       return round
     };
-    
-    function game() {
-      const game = {"roundOne":playRound(), "roundTwo":playRound()};
-      return game
-    }
-
-
-
-
-
-    console.log(game());
+   
+    console.log(playRound());
 
   </script>
 </body>
