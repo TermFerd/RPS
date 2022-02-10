@@ -8,9 +8,6 @@
 <body>
   <script type="text/javascript">
 
-    let win = "You Win! You beat Jeff!"
-    let lose = "You Lose! Paper beats Rock"
-
   	function computerPlay() {
   		const RPS = ['rock', 'scissors', 'paper'];
   		const randomSelection = RPS[Math.floor(Math.random()*RPS.length)];
@@ -33,9 +30,20 @@
     function playRound() {
       playerSelection = playerSelect();
       computerSelection = computerPlay();
-      const round = {"playerSelection":playerSelection, "computerSelection": computerSelection};
-      return round
-    };
+      let result = ""
+      if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
+        (playerSelection == 'scissors' && computerSelection == 'paper') ||
+        (playerSelection == 'paper' && computerSelection == 'rock')) {
+        result = ('You win! ')
+        } else if (playerSelection == computerSelection) {
+        result = ('Its a tie.')
+        } else ((playerSelection == 'scissors' && computerSelection == 'rock') ||
+        (playerSelection == 'paper' && computerSelection == 'scissors') ||
+        (playerSelection == 'rock' && computerSelection == 'paper')) {
+        result = ('You love! ')
+        }
+        return result
+     };
    
     console.log(playRound());
 
