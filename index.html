@@ -42,8 +42,16 @@
         }
         return result + (' - Player:' + playerSelection + ' Computer:' + computerSelection)
      };
+
+     function game() {
+       let results =''
+       for (let i = 0; i < 5; i++) {
+        results = console.log(playRound());
+       }
+       return results
+     }
    
-    console.log(playRound());
+    console.log(game());
 
   </script>
 </body>
