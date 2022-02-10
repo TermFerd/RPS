@@ -37,12 +37,10 @@
         result = ('You win! ')
         } else if (playerSelection == computerSelection) {
         result = ('Its a tie.')
-        } else ((playerSelection == 'scissors' && computerSelection == 'rock') ||
-        (playerSelection == 'paper' && computerSelection == 'scissors') ||
-        (playerSelection == 'rock' && computerSelection == 'paper')) {
-        result = ('You love! ')
+        } else {
+        result = ('You lose! ')
         }
-        return result
+        return result + (' - Player:' + playerSelection + ' Computer:' + computerSelection)
      };
    
     console.log(playRound());
